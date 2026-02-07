@@ -1,219 +1,174 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="2685.3">
-  <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
-    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For Reva 🌹</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            width: 100vw;
+            overflow: hidden;
+            font-family: 'Playfair Display', serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* Beautiful Soft Pink Gradient Background */
+            background: linear-gradient(135deg, #ffc3a0 0%, #ffafbd 100%);
+        }
+
+        /* Falling Petals Animation */
+        .petal-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1; /* Above background, below text */
+            overflow: hidden;
+        }
+
+        .petal {
+            position: absolute;
+            display: block;
+            width: 15px;
+            height: 20px;
+            background-color: #ff4d6d; /* Deep pink/red petal color */
+            border-radius: 50% 0 50% 50%;
+            opacity: 0.8;
+            top: -10%;
+            box-shadow: 1px 1px 5px rgba(0,0,0,0.2);
+            animation: falling linear infinite;
+        }
+
+        @keyframes falling {
+            0% { top: -10%; transform: translateX(0) rotate(0deg); opacity: 0.8; }
+            100% { top: 110%; transform: translateX(100px) rotate(360deg); opacity: 0; }
+        }
+
+        /* Content Container */
+        .content {
+            z-index: 10;
+            text-align: center;
+            color: #4a4a4a; /* Dark gray text for contrast against pink */
+            padding: 20px;
+            max-width: 800px;
+            width: 90%;
+            max-height: 95vh;
+            overflow-y: auto;
+        }
+
+        /* Bouquet Image */
+        .bouquet-img {
+            width: 100%;
+            max-width: 480px;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+            margin: 15px auto;
+            display: block;
+            opacity: 0;
+            animation: fadeUp 2s ease-out forwards 1.5s;
+        }
+
+        /* TYPOGRAPHY */
+        
+        /* Hindi Quote */
+        .hindi {
+            font-size: 1.6rem;
+            color: #d6336c; /* Darker pink for text */
+            font-style: italic;
+            margin-bottom: 10px;
+            opacity: 0;
+            animation: fadeUp 2s ease-out forwards 0.5s;
+        }
+
+        /* Main Header with ROMANTIC FONT */
+        h1 {
+            font-family: 'Great Vibes', cursive;
+            font-size: 4.5rem;
+            margin: 10px 0;
+            color: #c2185b; /* Deep romantic red/pink */
+            text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5);
+            opacity: 0;
+            animation: fadeUp 2s ease-out forwards 2.5s;
+            line-height: 1.2;
+        }
+
+        /* English Message */
+        .english-main {
+            font-family: 'Great Vibes', cursive;
+            font-size: 2.2rem;
+            font-weight: 400;
+            line-height: 1.4;
+            color: #a02c5d;
+            opacity: 0;
+            animation: fadeUp 2s ease-out forwards 3.5s;
+            margin-top: 10px;
+        }
+
+        .english-sub {
+            font-size: 1.1rem;
+            color: #555;
+            margin-top: 20px;
+            font-style: italic;
+            font-weight: 500;
+            opacity: 0;
+            animation: fadeUp 2s ease-out forwards 4.5s;
+        }
+
+        /* Animations */
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Responsive Mobile Adjustments */
+        @media (max-width: 600px) {
+            h1 { font-size: 3rem; }
+            .hindi { font-size: 1.3rem; }
+            .english-main { font-size: 1.8rem; }
+            .bouquet-img { max-width: 100%; }
+        }
+    </style>
 </head>
 <body>
-<p class="p1">&lt;!DOCTYPE html&gt;</p>
-<p class="p1">&lt;html lang="en"&gt;</p>
-<p class="p1">&lt;head&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta charset="UTF-8"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;title&gt;For Reva 🌹&lt;/title&gt;</p>
-<p class="p2"><span class="Apple-converted-space">    </span></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;link rel="preconnect" href="https://fonts.googleapis.com"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;link rel="preconnect" href="https://fonts.gstatic.com" crossorigin&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;link href="https://fonts.googleapis.com/css2?family=Great+Vibes&amp;family=Playfair+Display:ital,wght@0,400;0,700;1,400&amp;display=swap" rel="stylesheet"&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;style&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>body {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>margin: 0;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>padding: 0;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>height: 100vh;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>width: 100vw;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>overflow: hidden;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>font-family: 'Playfair Display', serif;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>display: flex;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>justify-content: center;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>align-items: center;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>/* Soft Pinkish Gradient Background */</p>
-<p class="p1"><span class="Apple-converted-space">            </span>background: linear-gradient(to bottom, #ffe6ea, #ffc0cb);</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>/* The Video Background */</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.video-bg {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>position: absolute;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>top: 50%;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>left: 50%;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>min-width: 100%;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>min-height: 100%;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>width: auto;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>height: auto;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>transform: translate(-50%, -50%);</p>
-<p class="p1"><span class="Apple-converted-space">            </span>z-index: -2;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>opacity: 0.5;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>/* Dark Overlay */</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.overlay {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>position: absolute;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>top: 0;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>left: 0;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>width: 100%;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>height: 100%;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>background: radial-gradient(circle, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.9) 100%);</p>
-<p class="p1"><span class="Apple-converted-space">            </span>z-index: -1;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>/* Falling Petals */</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.petal-container {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>position: absolute;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>top: 0;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>left: 0;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>width: 100%;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>height: 100%;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>pointer-events: none;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>z-index: 0;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>overflow: hidden;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>.petal {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>position: absolute;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>display: block;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>width: 15px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>height: 20px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>background-color: #ff4d6d;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 50% 0 50% 50%;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>opacity: 0.7;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>top: -10%;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>animation: falling linear infinite;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>@keyframes falling {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>0% { top: -10%; transform: translateX(0) rotate(0deg); opacity: 0.7; }</p>
-<p class="p1"><span class="Apple-converted-space">            </span>100% { top: 110%; transform: translateX(100px) rotate(360deg); opacity: 0; }</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>/* Content Container */</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.content {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>z-index: 10;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>text-align: center;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>color: white;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>padding: 20px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>max-width: 800px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>width: 90%;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>max-height: 95vh;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>overflow-y: auto;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>/* Bouquet Image */</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.bouquet-img {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>width: 100%;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>max-width: 480px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>height: auto;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 12px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>box-shadow: 0 20px 40px rgba(0,0,0,0.7);</p>
-<p class="p1"><span class="Apple-converted-space">            </span>margin: 15px auto;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>display: block;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>opacity: 0;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>animation: fadeUp 2s ease-out forwards 1.5s;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>/* TYPOGRAPHY */</p>
-<p class="p2"><span class="Apple-converted-space">        </span></p>
-<p class="p1"><span class="Apple-converted-space">        </span>/* Hindi Quote (Keeping Playfair for readability) */</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.hindi {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>font-size: 1.6rem;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>color: #ff8fa3;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>font-style: italic;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>margin-bottom: 10px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>opacity: 0;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>animation: fadeUp 2s ease-out forwards 0.5s;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>/* Main Header with ROMANTIC FONT */</p>
-<p class="p1"><span class="Apple-converted-space">        </span>h1 {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>font-family: 'Great Vibes', cursive; /* The Love Font */</p>
-<p class="p1"><span class="Apple-converted-space">            </span>font-size: 4.5rem; /* Large size for script font */</p>
-<p class="p1"><span class="Apple-converted-space">            </span>margin: 10px 0;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>color: #fff;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>text-shadow: 0 4px 15px rgba(255, 51, 102, 0.6);</p>
-<p class="p1"><span class="Apple-converted-space">            </span>opacity: 0;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>animation: fadeUp 2s ease-out forwards 2.5s;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>line-height: 1.2;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>/* English Message with ROMANTIC FONT */</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.english-main {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>font-family: 'Great Vibes', cursive; /* The Love Font */</p>
-<p class="p1"><span class="Apple-converted-space">            </span>font-size: 2.2rem;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>font-weight: 400;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>line-height: 1.4;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>color: #fff0f3;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>opacity: 0;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>animation: fadeUp 2s ease-out forwards 3.5s;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>margin-top: 10px;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>.english-sub {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>font-size: 1rem;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>color: #ccc;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>margin-top: 20px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>font-style: italic;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>opacity: 0;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>animation: fadeUp 2s ease-out forwards 4.5s;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>/* Animations */</p>
-<p class="p1"><span class="Apple-converted-space">        </span>@keyframes fadeUp {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>from { opacity: 0; transform: translateY(30px); }</p>
-<p class="p1"><span class="Apple-converted-space">            </span>to { opacity: 1; transform: translateY(0); }</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>/* Responsive Mobile Adjustments */</p>
-<p class="p1"><span class="Apple-converted-space">        </span>@media (max-width: 600px) {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>h1 { font-size: 3rem; }</p>
-<p class="p1"><span class="Apple-converted-space">            </span>.hindi { font-size: 1.3rem; }</p>
-<p class="p1"><span class="Apple-converted-space">            </span>.english-main { font-size: 1.8rem; }</p>
-<p class="p1"><span class="Apple-converted-space">            </span>.bouquet-img { max-width: 100%; }</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/style&gt;</p>
-<p class="p1">&lt;/head&gt;</p>
-<p class="p1">&lt;body&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;video class="video-bg" autoplay muted loop playsinline&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;source src="blooming_rose.mp4" type="video/mp4"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/video&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="overlay"&gt;&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="petal-container"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;span class="petal" style="left: 10%; animation-duration: 7s; animation-delay: 0s;"&gt;&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;span class="petal" style="left: 30%; animation-duration: 10s; animation-delay: 2s;"&gt;&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;span class="petal" style="left: 50%; animation-duration: 6s; animation-delay: 4s;"&gt;&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;span class="petal" style="left: 70%; animation-duration: 8s; animation-delay: 1s;"&gt;&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;span class="petal" style="left: 90%; animation-duration: 9s; animation-delay: 3s;"&gt;&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;span class="petal" style="left: 20%; animation-duration: 11s; animation-delay: 5s;"&gt;&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;span class="petal" style="left: 60%; animation-duration: 7.5s; animation-delay: 6s;"&gt;&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;span class="petal" style="left: 80%; animation-duration: 9.5s; animation-delay: 7s;"&gt;&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="content"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="hindi"&gt;"Tumhe kya gulab doon, tum khud ek gulab ho..."&lt;/div&gt;</p>
-<p class="p2"><span class="Apple-converted-space">        </span></p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;img src="bouquet.png" alt="A massive bouquet of red roses" class="bouquet-img"&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;h1&gt;Happy Rose Day, Reva!! 💋😘&lt;/h1&gt;</p>
-<p class="p2"><span class="Apple-converted-space">        </span></p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="english-main"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>Just like this rose, my life has bloomed&lt;br&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>beautifully since you walked into it.</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p2"><span class="Apple-converted-space">        </span></p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="english-sub"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>To the one who adds color to my life. 🌹</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;/body&gt;</p>
-<p class="p1">&lt;/html&gt;</p>
+
+    <div class="petal-container">
+        <span class="petal" style="left: 10%; animation-duration: 7s; animation-delay: 0s;"></span>
+        <span class="petal" style="left: 30%; animation-duration: 10s; animation-delay: 2s;"></span>
+        <span class="petal" style="left: 50%; animation-duration: 6s; animation-delay: 4s;"></span>
+        <span class="petal" style="left: 70%; animation-duration: 8s; animation-delay: 1s;"></span>
+        <span class="petal" style="left: 90%; animation-duration: 9s; animation-delay: 3s;"></span>
+        <span class="petal" style="left: 20%; animation-duration: 11s; animation-delay: 5s;"></span>
+        <span class="petal" style="left: 60%; animation-duration: 7.5s; animation-delay: 6s;"></span>
+        <span class="petal" style="left: 80%; animation-duration: 9.5s; animation-delay: 7s;"></span>
+    </div>
+
+    <div class="content">
+        <div class="hindi">"Tumhe kya gulab doon, tum khud ek gulab ho..."</div>
+        
+        <img src="bouquet.png" alt="A massive bouquet of red roses" class="bouquet-img">
+
+        <h1>Happy Rose Day, Reva!! 💋😘</h1>
+        
+        <div class="english-main">
+            Just like this rose, my life has bloomed<br>
+            beautifully since you walked into it.
+        </div>
+        
+        <div class="english-sub">
+            To the one who adds color to my life. 🌹
+        </div>
+    </div>
+
 </body>
 </html>
